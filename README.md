@@ -14,8 +14,11 @@ This script requires an `ypcat passwd` log file or one that has similar formatti
     
 And then we execute the script as following:
 
-    ./fitnam {filename} {saveOutput y/n} {numberLines y/n}
+    ./fitnam {filename} (optional){saveOutput}
     
-- filename - the log file
-- saveOutput - `1` or `y` to save file. The filename will be `viets.txt`. If `0` or `n`, the output will be your terminal.
-- numberLines - `1` or `y` to save file. If `saveOutput` option was set as on, `viets.txt` will have numbered lines.
+- `filename` - the log file
+- `saveOutput` - `y` to save file. The filename will be `viets.txt`. Otherwise, the output will be your terminal.
+
+Example:
+
+    ./fitnam students.txt y
