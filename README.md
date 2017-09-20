@@ -12,7 +12,7 @@ This script finds Vietnamese people from a file using the 25 most common Vietnam
 This script requires alog file or one that has similar formatting, like:
 
     John Smith
-    Jane Smith
+    Ngo Ha Mi
     Jack Bauer
     Reacher Jack
 
