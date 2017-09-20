@@ -1,5 +1,5 @@
 # Fitnam
-A script to find Viets at FIT.
+A script to find Viets.
 
 Finding your compatriots in the school can be a daunting task, exhausting even for the most durable of stalkers!
 
