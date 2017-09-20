@@ -50,10 +50,10 @@ fi
 for i in "${familyNames[@]}"
 do 
   name=`echo "$i"`
-  cat $file | cut -d":" -f5 | grep -E \("$name"[[:blank:]]\|[[:blank:]]"$name"[[:blank:]]\) >> .fitnam.log
+  cat $file | grep "\b$name\b" >> .fitnam.log
 
-  nameFem=`echo "$name"ova`
-  cat $file | cut -d":" -f5 | grep -E \("$nameFem"[[:blank:]]\|[[:blank:]]"$nameFem"[[:blank:]]\) >> .fitnam.log
+  nameFem=`echo "$name"ová`
+  cat $file | grep -E "\b$nameFem\b" >> .fitnam.log
 done
 
 if [ "$#" -eq 1 ]; then
