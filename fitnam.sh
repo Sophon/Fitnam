@@ -42,19 +42,26 @@ familyName=(
   "Vu"
 )
 
+if [ -f ".fitnam.log" ]; then
+  echo "deleting old .fitnam.log"
+  rm .fitnam.log
+fi
+
 for i in "${familyName[@]}"
 do 
   name=`echo "$i"`
-  cat $file | cut -d":" -f5 | grep -E \("$name"[[:blank:]]\|[[:blank:]]"$name"[[:blank:]]\) >> viets.txt
+  cat $file | cut -d":" -f5 | grep -E \("$name"[[:blank:]]\|[[:blank:]]"$name"[[:blank:]]\) >> .fitnam.log
 
   nameFem=`echo "$name"ova`
-  cat $file | cut -d":" -f5 | grep -E \("$nameFem"[[:blank:]]\|[[:blank:]]"$nameFem"[[:blank:]]\) >> viets.txt
+  cat $file | cut -d":" -f5 | grep -E \("$nameFem"[[:blank:]]\|[[:blank:]]"$nameFem"[[:blank:]]\) >> .fitnam.log
 done
 
 if [ "$#" -eq 1 ]; then
-  cat viets.txt | nl
-  rm viets.txt
+  cat .fitnam.log | nl
+  rm .fitnam.log
 elif [ "$#" -eq 2 ] && [ "$2" = y ]; then
+  cat .fitnam.log | nl > viets.txt
+  rm .fitnam.log
   echo "saved output to viets.txt"
   echo "Happy stalking!"
 else
