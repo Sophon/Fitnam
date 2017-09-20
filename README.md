@@ -22,3 +22,7 @@ And then we execute the script as following:
 Example:
 
     ./fitnam students.txt y
+    
+## Problems
+
+As of now, there could be false positives, for example the Dutch sometimes are named `Van`. The resulted output still should be checked for those inaccuracies.
