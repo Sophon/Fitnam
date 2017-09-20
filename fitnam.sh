@@ -14,7 +14,7 @@ fi
 
 file=`echo "$1"`
 
-familyName=(
+familyNames=(
   "Bui"
   "Cao"
   "Dang"
@@ -47,7 +47,7 @@ if [ -f ".fitnam.log" ]; then
   rm .fitnam.log
 fi
 
-for i in "${familyName[@]}"
+for i in "${familyNames[@]}"
 do 
   name=`echo "$i"`
   cat $file | cut -d":" -f5 | grep -E \("$name"[[:blank:]]\|[[:blank:]]"$name"[[:blank:]]\) >> .fitnam.log
