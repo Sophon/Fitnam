@@ -5,6 +5,11 @@ if [ "$#" -ne 1 ]; then
   exit 1
 fi
 
+if [ ! -f "$1" ]; then
+  echo "File not found!"
+  exit 1
+fi
+
 file=`echo "$1"`
 
 familyName=(
