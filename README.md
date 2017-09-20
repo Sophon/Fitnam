@@ -1,7 +1,7 @@
 # Fitnam
 A script to find Viets at FIT.
 
-Finding your compatriots in the school can be a daunting task, exhausting even the most durable stalkers!
+Finding your compatriots in the school can be a daunting task, exhausting even for the most durable of stalkers!
 
 But worry not! What kind of person would I be if I couldn't create a script to do that job for me, after all the love my parents have given me or after all the money tax-payers have poured into me. So here it is, money well spent!
 
