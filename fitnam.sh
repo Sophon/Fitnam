@@ -13,17 +13,31 @@ fi
 file=`echo "$1"`
 
 familyName=(
+  "Bui"
+  "Cao"
+  "Dang"
+  "Dao"
   "Do" 
+  "Doan"
+  "Duong"
+  "Huynh"
   "Le"
+  "Luu"
+  "Ly"
+  "Mai"
   "Ngo"
   "Nguyen"
   "Pham"
+  "Thai"
   "Tiep"
   "Tran"
   "Trieu"
   "Trong"
   "Truong"
+  "Truong"
   "Van"
+  "Vo"
+  "Vu"
 )
 
 for i in "${familyName[@]}"
