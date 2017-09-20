@@ -1,7 +1,9 @@
 #!/bin/bash
 
-if [ "$#" -ne 1 ]; then
-  echo 'Usage: ./fitnam.sh {filename}'
+errorMsg=`echo 'Usage: ./fitnam.sh {filename} (optional){saveOutput}'`
+
+if [ "$#" -eq 0 ]; then
+  echo "$errorMsg"
   exit 1
 fi
 
@@ -43,12 +45,19 @@ familyName=(
 for i in "${familyName[@]}"
 do 
   name=`echo "$i"`
-  cat $file | cut -d":" -f5 | grep -E \("$name"[[:blank:]]\|[[:blank:]]"$name"[[:blank:]]\) >> tmp_names.txt
+  cat $file | cut -d":" -f5 | grep -E \("$name"[[:blank:]]\|[[:blank:]]"$name"[[:blank:]]\) >> viets.txt
 
   nameFem=`echo "$name"ova`
-  cat $file | cut -d":" -f5 | grep -E \("$nameFem"[[:blank:]]\|[[:blank:]]"$nameFem"[[:blank:]]\) >> tmp_names.txt
+  cat $file | cut -d":" -f5 | grep -E \("$nameFem"[[:blank:]]\|[[:blank:]]"$nameFem"[[:blank:]]\) >> viets.txt
 done
 
-cat tmp_names.txt | nl
-
-rm tmp_names.txt
+if [ "$#" -eq 1 ]; then
+  cat viets.txt | nl
+  rm viets.txt
+elif [ "$#" -eq 2 ] && [ "$2" = y ]; then
+  echo "saved output to viets.txt"
+  echo "Happy stalking!"
+else
+  echo "$errorMsg"
+  exit 1
+fi
