@@ -7,10 +7,14 @@ But worry not! What kind of person would I be if I couldn't create a script to d
 
 ## Usage
 
-This script requires an `ypcat passwd` log file or one that has similar formatting, like:
+This script requires alog file or one that has similar formatting, like:
 
-    johnsmith:##johnsmith:10657:1001:John Smith student:/home/stud/johnsmith:/bin/bash
-    janesmith:##janesmith:10666:1001:Jane Smith employee:/home/emp/janesmith:/bin/bash
+    John Smith
+    Jane Smith
+    Jack Bauer
+    Reacher Jack
+
+Order of family/given name doesn't matter.
     
 And then we execute the script as following:
 
