@@ -20,7 +20,7 @@ Order of family/given name doesn't matter.
     
 And then we execute the script as following:
 
-    ./fitnam {filename} (optional){saveOutput}
+    ./fitnam.sh {filename} (optional){saveOutput}
     
 - `filename` - the log file
 - `saveOutput` - `y` to save file. The filename will be `viets.txt`. Otherwise, the output will be your terminal.
