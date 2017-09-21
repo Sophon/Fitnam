@@ -5,7 +5,7 @@ Finding your compatriots in the school can be a daunting task, exhausting even f
 
 But worry not! What kind of person would I be if I couldn't create a script to do that job for me, after all the love my parents have given me or after all the money tax-payers have poured into me. So here it is, money well spent!
 
-This script finds Vietnamese people from a file using the 25 most common Vietnamese family names. Some family names could also be given names but also be second family name - we will consider all possibilities.
+This script finds Vietnamese people from a file using the 25 most common Vietnamese family names. Some family names could also be given names but also be second family name. Also, certain countries have -ova suffix in the family name - that variation is accounted for. 
 
 ## Usage
 
@@ -16,7 +16,7 @@ This script requires a og file or one that has similar formatting, like:
     Jack Bauer
     Reacher Jack
 
-Order of family/given name doesn't matter. Also, certain countries have -ova suffix in the family name - that variation is accounted for. 
+Order of family/given name doesn't matter.
     
 And then we execute the script as following:
 
