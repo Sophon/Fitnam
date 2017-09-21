@@ -9,7 +9,7 @@ This script finds Vietnamese people from a file using the 25 most common Vietnam
 
 ## Usage
 
-This script requires a og file or one that has similar formatting, like:
+This script requires a log file or one that has similar formatting, like:
 
     John Smith
     Ngo Ha Mi
